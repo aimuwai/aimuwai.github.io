@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-    <meta property="og:site_name" content="Huabing Blog">
+    <meta property="og:site_name" content="Miaoyu Blog">
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://zhaohuabing.com/img/home-bg-jeep.jpg">
-    <meta property="twitter:image" content="https://zhaohuabing.com/img/home-bg-jeep.jpg" />
+    <meta property="og:image" content="https://miaoyu.io/img/home-bg-ice.jpeg">
+    <meta property="twitter:image" content="https://miaoyu.io/img/home-bg-ice.jpeg" />
     
 
     
@@ -31,10 +31,10 @@
     
     
 
-    <meta name="keyword"  content="赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
+    <meta name="keyword"  content="苗宇, Miaoyu, 网络安全, 苗宇的博客, Miaoyu Blog, 博客">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>使用Istio实现应用流量转移-赵化冰的博客 | Zhaohuabing Blog</title>
+    <title>使用Istio实现应用流量转移-苗宇的博客 | Miaoyu Blog</title>
 
     <link rel="canonical" href="/2017/11/07/istio-traffic-shifting/">
 
@@ -82,7 +82,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Huabing Blog</a>
+            <a class="navbar-brand" href="/">Miaoyu Blog</a>
         </div>
 
         
@@ -111,6 +111,8 @@
                     
 		    
                         <li><a href="/top/books/">BOOKS</a></li>
+                    
+                        <li><a href="/top/archive/">ARCHIVE</a></li>
                     
                         <li><a href="/top/about/">ABOUT</a></li>
                     
@@ -179,15 +181,17 @@
                     <h1>使用Istio实现应用流量转移</h1>
                     <h2 class="subheading">  &#34;本文翻译自istio官方文档&#34;</h2>
                     <span class="meta">
-                        Posted by 
                         
-                                &#34;赵化冰&#34;
-                         
-                        on 
-                        Tuesday, November 7, 2017
-                        
-                        
-                        
+                            Posted by 
+                            
+                                    &#34;赵化冰&#34;
+                             
+                            on 
+                            Tuesday, November 7, 2017
+                            
+                            
+                            
+                            
                     </span>
                 </div>
             </div>
@@ -242,7 +246,7 @@
 <ol>
 <li>
 <p>将所有微服务的缺省版本设置为v1.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl create -f samples/bookinfo/kube/route-rule-all-v1.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl create -f samples/bookinfo/kube/route-rule-all-v1.yaml
 </code></pre></div></li>
 <li>
 <p>在浏览器中打开http://$GATEWAY_URL/productpage,  确认<code>reviews</code> 服务目前的活动版本是v1。</p>
@@ -251,11 +255,11 @@
 <blockquote>
 <p>请注意：如果之前执行过 <a href="http://istio.doczh.cn/docs/tasks/traffic-management/request-routing.html">配置请求路由</a>任务，则需要先注销测试用户“jason”或者删除之前单独为该用户创建的测试规则：</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl delete routerule reviews-test-v2
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl delete routerule reviews-test-v2
 </code></pre></div></li>
 <li>
 <p>首先，使用下面的命令把50%的流量从<code>reviews:v1</code>转移到<code>reviews:v3</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl replace -f samples/bookinfo/kube/route-rule-reviews-50-v3.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl replace -f samples/bookinfo/kube/route-rule-reviews-50-v3.yaml
 </code></pre></div><p>注意这里使用了<code>istioctl replace</code>而不是<code>create</code>。</p>
 </li>
 <li>
@@ -266,7 +270,7 @@
 </li>
 <li>
 <p>当v3版本的<code>reviews</code>服务已经稳定运行后，可以将100%的流量路由到<code>reviews:v3</code>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl replace -f samples/bookinfo/kube/route-rule-reviews-v3.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl replace -f samples/bookinfo/kube/route-rule-reviews-v3.yaml
 </code></pre></div><p>此时，以任何用户登录到<code>productpage</code>页面，都可以看到带红星的评价信息。</p>
 </li>
 </ol>
@@ -278,7 +282,7 @@
 <ul>
 <li>
 <p>删除路由规则。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl delete -f samples/bookinfo/kube/route-rule-all-v1.yaml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">istioctl delete -f samples/bookinfo/kube/route-rule-all-v1.yaml
 </code></pre></div></li>
 <li>
 <p>如果不打算尝试后面的任务，请参照<a href="http://istio.doczh.cn/docs/guides/bookinfo.html#cleanup">BookInfo cleanup</a> 中的步骤关闭应用程序。</p>
@@ -301,7 +305,7 @@
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
-		<span class="author"><a href="https://zhaohuabing.com"><img src="/img/favicon.png" />Huabing Blog</a></span>
+		<span class="author"><a href="https://miaoyu.io"><img src="/img/favicon.png" />Miaoyu Blog</a></span>
         
 	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
 		
@@ -452,7 +456,7 @@
                 <ul class="list-inline text-center">
                    
                    <li>
-                       <a href='' rel="alternate" type="application/rss+xml" title="Huabing Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Miaoyu Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
@@ -483,7 +487,7 @@
                         <a target="_blank" href="/your%20wechat%20qr%20code%20image">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-wechat fa-stack-1x fa-inverse"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -529,7 +533,7 @@
             
                 </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy; Huabing Blog 2021
+                    Copyright &copy; Miaoyu Blog 2021
                     <br>
                     <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
                     <iframe

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>扯淡 on Miaoyu Blog</title>
+    <link>https://miaoyu.io/tags/%E6%89%AF%E6%B7%A1/</link>
+    <description>Recent content in 扯淡 on Miaoyu Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://miaoyu.io/tags/%E6%89%AF%E6%B7%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一篇，写在2021.9.1</title>
+      <link>https://miaoyu.io/post/2021-09-01-my-first-post/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://miaoyu.io/post/2021-09-01-my-first-post/</guid>
+      <description>第一篇文章，正好写在2021.9.1，孩子上了学的应该都知道这是一个什么日子。 我的娃刚好今年上幼儿园第一年，也是第一次感受到娃去上学，这在家</description>
+    </item>
+    
+  </channel>
+</rss>
