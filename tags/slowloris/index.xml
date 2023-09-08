@@ -8,6 +8,18 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://miaoyu.io/tags/slowloris/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Talk about Slowloris and slow HTTP attacks</title>
+      <link>https://miaoyu.io/post/2023-09-07-slowloris-en/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://miaoyu.io/post/2023-09-07-slowloris-en/</guid>
+      <description>Talk about Slowloris and slow HTTP attacks Slowloris is back? Slowloris, a DDoS attack tool that has been around for at least a decade, has suddenly come back into the picture.
+Microsoft suffered a DDoS attack in June this year that affected Azure, Outlook, OneDrive and some other businesses.
+Finally, Microsoft officially disclosed the attack, the details can be referred to:
+Microsoft Response to Layer 7 Distributed Denial of Service (DDoS) Attacks | MSRC Blog | Microsoft Security Response Center</description>
+    </item>
+    
+    <item>
       <title>聊聊Slowloris与慢速攻击</title>
       <link>https://miaoyu.io/post/2023-09-07-slowloris/</link>
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>

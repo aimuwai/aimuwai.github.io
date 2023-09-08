@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DDoS on Miaoyu Blog</title>
-    <link>https://miaoyu.io/tags/ddos/</link>
-    <description>Recent content in DDoS on Miaoyu Blog</description>
+    <title>Slow HTTP Attack on Miaoyu Blog</title>
+    <link>https://miaoyu.io/tags/slow-http-attack/</link>
+    <description>Recent content in Slow HTTP Attack on Miaoyu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://miaoyu.io/tags/ddos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://miaoyu.io/tags/slow-http-attack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Talk about Slowloris and slow HTTP attacks</title>
       <link>https://miaoyu.io/post/2023-09-07-slowloris-en/</link>
@@ -17,15 +17,6 @@
 Microsoft suffered a DDoS attack in June this year that affected Azure, Outlook, OneDrive and some other businesses.
 Finally, Microsoft officially disclosed the attack, the details can be referred to:
 Microsoft Response to Layer 7 Distributed Denial of Service (DDoS) Attacks | MSRC Blog | Microsoft Security Response Center</description>
-    </item>
-    
-    <item>
-      <title>聊聊Slowloris与慢速攻击</title>
-      <link>https://miaoyu.io/post/2023-09-07-slowloris/</link>
-      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://miaoyu.io/post/2023-09-07-slowloris/</guid>
-      <description>聊聊Slowloris与慢速攻击 Slowloris回来了？ Slowloris这个DDoS攻击工具的出现，已经至少十多年的历史了，本来已经不怎</description>
     </item>
     
   </channel>

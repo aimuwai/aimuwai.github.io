@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="工作和生活可以平衡吗？" />
-    <meta property="og:title" content="工作和生活可以平衡吗？" />
-    <meta property="twitter:title" content="工作和生活可以平衡吗？" />
+    <meta name="title" content="Talk about Slowloris and slow HTTP attacks" />
+    <meta property="og:title" content="Talk about Slowloris and slow HTTP attacks" />
+    <meta property="twitter:title" content="Talk about Slowloris and slow HTTP attacks" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="苗宇, Miaoyu, 网络安全, 苗宇的博客, Miaoyu Blog, 博客">
     <link rel="shortcut icon" href="/img/Snowflake.jpg">
 
-    <title>工作和生活可以平衡吗？-Miaoyu Blog</title>
+    <title>Talk about Slowloris and slow HTTP attacks-Miaoyu Blog</title>
 
-    <link rel="canonical" href="/post/2021-10-8-life-and-work/">
+    <link rel="canonical" href="/post/2023-09-07-slowloris-en/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 
@@ -171,21 +171,29 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/%E5%B7%A5%E4%BD%9C%E6%80%9D%E8%80%83" title="工作思考">
-                            工作思考
+                        <a class="tag" href="/tags/ddos" title="DDoS">
+                            DDoS
+                        </a>
+                        
+                        <a class="tag" href="/tags/slowloris" title="Slowloris">
+                            Slowloris
+                        </a>
+                        
+                        <a class="tag" href="/tags/slow-http-attack" title="Slow HTTP Attack">
+                            Slow HTTP Attack
                         </a>
                         
                     </div>
-                    <h1>工作和生活可以平衡吗？</h1>
+                    <h1>Talk about Slowloris and slow HTTP attacks</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         
                             Posted by 
                             
-                                    &#34;Miaoyu&#34;
+                                Miaoyu
                              
                             on 
-                            Friday, October 8, 2021
+                            Thursday, September 7, 2023
                             
                             
                             
@@ -212,36 +220,127 @@
 
                 
 
-                <nav id="TableOfContents"></nav>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#talk-about-slowloris-and-slow-http-attacks">Talk about Slowloris and slow HTTP attacks</a>
+      <ul>
+        <li><a href="#slowloris-is-back">Slowloris is back?</a></li>
+        <li><a href="#slowloris-history">Slowloris history</a></li>
+        <li><a href="#slowloris-and-slow-http-attack-principles-and-protection-suggestions">Slowloris and slow HTTP attack principles and protection suggestions</a></li>
+        <li><a href="#at-the-end">At the end</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 
-                <p>今天10.8，十一长假结束了，不知道大家十一过得怎么样？</p>
-<p>先说说为什么会突然想写这个主题。</p>
-<p>主要原因还是十一长假期间被很多工作的事情搞的焦头烂额，情绪和心态都不太好，正好反思下。</p>
-<p>十一前项目结项临近，团队连续工作了9天，而且经常搞到后半夜，身心有点疲惫。</p>
-<p>十一放假期间，一直有断断续续的工作问题需要处理。每天都要面临随时处理工作问题的不确定性，包括晚上。所以很焦虑，感觉也没休息好，做梦都在工作。</p>
-<p>这可能也是目前很多人的常态了。</p>
-<p>工作、生活，已经完全交织在一起，感觉很疲惫，工作、生活都没有做好。</p>
-<p>怎么办？有几个建议:</p>
-<ol>
-<li>
-<p>心态</p>
-<p>首先还是要从心理上认识到并接受这个常态，有些行业和职位的特点就是这样，没法做到工作时间就工作，下班就生活。从心理接受它，能够减少一些面对不确定性的焦虑。</p>
-</li>
-<li>
-<p>该工作就工作，该生活就生活</p>
-<p>不是说工作和生活已经无法区分了吗？这里说的是尽量专心做一件事。比如在开车时，紧急的事情来了。但紧急的事情其实一般还是有缓和的时间，能否缓和一下到达以后再处理？或停到路边安全地点再处理？能否先让其他同事帮忙处理？一边开车一边处理工作，十分危险不说，也无法专心处理好。其他时候比如在给家人过生日，在带娃，在医院等，能否先把一件事处理好或安排好后再处理另外一件事？否则真的是焦头烂额哪件事都没处理好。</p>
-</li>
-<li>
-<p>依赖团队的力量</p>
-<p>有时候我们真的抽不开身时，与其硬着头皮上换来一个另客户和领导不满意的结果，是不是可以依赖同事和团队帮忙，协调其他有时间的人帮忙处理？是否可以提前就协调好工作代理人？</p>
-</li>
-<li>
-<p>工具</p>
-<p>最后再说一下工具的重要性。移动办公，远程办公的常态下，工具很重要。你可以随时用手机处理流程审批，处理文档吗？可以随时用移动设备办公吗？可以随时远程连接VPN吗？别小看工具的重要性，它可以给你节省大量的时间。</p>
-</li>
-</ol>
-<p>正好也看到池老师写的一篇工作和生活平衡的文章: 我们缺少一种能力，如何在工作和生活中寻找快乐的能力。也推荐给大家。https://mp.weixin.qq.com/s/NoBVdd66E2CgMjM0BHVd0Q</p>
-<p>最后，在工作和生活交织的常态下，你有什么好的办法或心得？也欢迎评论区留言。</p>
+                <h1 id="talk-about-slowloris-and-slow-http-attacks">Talk about Slowloris and slow HTTP attacks</h1>
+<p>
+  <img src="/img/f4d68d624e6abe8f993d1f718a59c8c2.png" alt="">
+
+</p>
+<h2 id="slowloris-is-back">Slowloris is back?</h2>
+<p>Slowloris, a DDoS attack tool that has been around for at least a decade, has suddenly come back into the picture.</p>
+<p>Microsoft suffered a DDoS attack in June this year that affected Azure, Outlook, OneDrive and some other businesses.</p>
+<p>Finally, Microsoft officially disclosed the attack, the details can be referred to:</p>
+<p><a href="https://msrc.microsoft.com/blog/2023/06/microsoft-response-to-layer-7-distributed-denial-of-service-ddos-attacks/">Microsoft Response to Layer 7 Distributed Denial of Service (DDoS) Attacks | MSRC Blog | Microsoft Security Response Center</a></p>
+<p>It is worth noting that this specifically mentions the means of attack including Slowloris:</p>
+<p>
+  <img src="/img/68f327dda27510a099060c5a206c7f0b.png" alt="">
+
+</p>
+<h2 id="slowloris-history">Slowloris history</h2>
+<p>Slowloris is a perl script, published in [http://ha.ckers.org/] (<a href="https://web.archive.org/web/20150426090206/http:/ha.ckers.org/">https://web.archive.org/web/20150426090206/http:/ha.ckers.org/</a>) earliest. This website has shut down, you can take a look at &lt; <a href="https://web.archive.org/web/20150426090206/http:/ha.ckers.org/slowloris">https://web.archive.org/web/20150426090206/http:/ha.ckers.org/slowloris</a> &gt;</p>
+<p>There are now many rewritten versions available on github in various languages.</p>
+<p>Slowloris was a very useful attack tool in that day, and make slow attack very famous.</p>
+<p>The attack group Anonymous released a common attack toolkit in 2016, along with a dedicated demonstration video, which also featured Slowloris, making the tool more widely available to attackers.</p>
+<p>
+  <img src="/img/1d51b00b34911d18fe091cc35ce848d7.png" alt="">
+
+</p>
+<p>Re-running the original version of Slowloris and seeing the logo pop up when it was running was full of memories.</p>
+<p>When I discussed the principle and protection algorithm of this tool every day, and tested and verified the process, I was too friendly to see this logo.</p>
+<p>
+  <img src="/img/f4d68d624e6abe8f993d1f718a59c8c2.png" alt="">
+
+</p>
+<h2 id="slowloris-and-slow-http-attack-principles-and-protection-suggestions">Slowloris and slow HTTP attack principles and protection suggestions</h2>
+<p>now slow attack means have developed many kinds of attacks, kali has also integrated a variety of slow attack tools, you can use slowhttptest tool on it. At present, there are 4 attack tools integrated:</p>
+<p>-H slow headers a.k.a. Slowloris (default)</p>
+<p>-B slow body a.k.a R-U-Dead-Yet</p>
+<p>-R range attack a.k.a Apache killer</p>
+<p>-X slow read a.k.a Slow Read</p>
+<h3 id="slow-header">Slow header</h3>
+<p><strong>Attack principle:</strong></p>
+<p>In normal HTTP Headers, it is end with two CLRF sections for HTTP headers. If the Web Server receives only one \r\n, it considers the HTTP Headers section unfinished and keeps the connection unreleased, waiting for the full request. The client then sends arbitrary HTTP headers to maintain the connection, which depletes the server thread pool and prevents the server from responding to denials of service.</p>
+<p>This type of attack uses only a small amount of bandwidth, depleting server resources with very slow, normal-looking access rate requests while evading DDoS detection.</p>
+<p>Example of normal http packets:</p>
+<p>
+  <img src="/img/53704d121b1205187dcc86f0ce211d88.png" alt="">
+
+</p>
+<p>Attack message, only one \r\n:</p>
+<p>
+  <img src="/img/0cfb11f878214cfd2097c173c7663ce0.png" alt="">
+
+</p>
+<h3 id="slow-body">Slow body</h3>
+<p><strong>Attack principle:</strong></p>
+<p>In an http post packet, a large content-length is declared, but the body is sent slowly. As a result, the server is in the waiting state. As a result, the server resources are exhausted.</p>
+<p>In normal packets, the content sent by a post is consistent with Content-length, for example, only 43 bytes are sent:</p>
+<p>
+  <img src="/img/3654eebc9770c28a3fcceaa36e2b0e8a.png" alt="">
+
+</p>
+<p>The Slow body attack declares 4096 bytes, but only sends more than 30 bytes slowly at a time:</p>
+<p>
+  <img src="/img/77f98085b7c03a6ec4d2dbbccf497b9e.png" alt="">
+
+</p>
+<h3 id="slow-read">Slow read</h3>
+<p><strong>Attack principle:</strong></p>
+<p>In Slow read attack mode, a normal read request is sent to the server to request a large file, but the TCP sliding window is artificially small. The server then cuts the file to the size of the sliding window and sends it. Files remain in the memory for a long time, consuming resources.</p>
+<p>TCP window Settings are smaller than the server&rsquo;s socket cache, so data is sent slowly. At the same time, the requested file is larger than the socket cache of the server, so that the server cannot put the file into the cache at once, but must constantly cut the file into the window size and then put it into the cache.</p>
+<p>The size of the normal TCP window is relatively large, and as the amount of data increases, the protocol supports the amplification ratio, which is generally very large:</p>
+<p>
+  <img src="/img/e52e8328eb4f41f6d422dfc0a18e1f09.png" alt="A white screen with black text Description automatically generated">
+
+</p>
+<p>The TCP window size of the attack traffic is particularly small:</p>
+<p>
+  <img src="/img/b34a4ab099ce34ef97d38884497128fe.png" alt="">
+
+</p>
+<h3 id="range-attack">Range attack</h3>
+<p><strong>Attack principle:</strong></p>
+<p>Range attacks can be regarded as DDoS attacks caused by vulnerabilities. Attacks take advantage of vulnerabilities on the Apache HTTPD server. A small number of requests may cause large memory and CPU usage on the server, affecting the normal services provided by the server. Vulnerability Details:</p>
+<p>
+  <img src="/img/22b1feec0c1a6dbbc46f9af97cdff790.png" alt="">
+
+</p>
+<p>For example, the Range or Request-Range header is used in the attack packet:</p>
+<p>
+  <img src="/img/a1f55b47e4f62ccac1ac9cd485105b0e.png" alt="">
+
+</p>
+<p>
+  <img src="/img/ff0bfc668ecc9ba39654e2eadb54f7d7.png" alt="">
+
+</p>
+<h3 id="common-protection-methods">Common protection methods</h3>
+<p>1、Increase server availability: Increasing the maximum number of clients allowed by the server at any one time increases the number of connections an attacker must make before the server becomes overloaded.</p>
+<p>2、Limit the number of incoming requests: Limit the maximum number of connections allowed for a single IP address.</p>
+<p>3、Cloud/security device-based protection: Protect the source server with a service that can act as a reverse proxy, buffering incoming requests before it starts sending anything to the source server.</p>
+<p>4、Limit the maximum allowable time for HTTP Header transmission: If HTTP header transmission is not completed within the specified time, the source IP address is considered as a slow connection attack, and the connection is interrupted and added to the blacklist.</p>
+<p>5、Configure an appropriate timeout period through the connectionTimeout attribute of the connector defined in server.xml.</p>
+<p>6、check the size of content-length and window, and interrupt the connection and join the blacklist if it is abnormal.</p>
+<h2 id="at-the-end">At the end</h2>
+<p>The game of attack and defense is a permanent topic.</p>
+<p>Although DDoS attacks are a time-honored and violent attack method, they are also constantly evolving, and new attack methods and tools often appear every once in a while.</p>
+<p>Let&rsquo;s finish with slowloris:</p>
+<p>
+  <img src="/img/d7ef5a4e220223320088ab46e80d17fa.png" alt="A small animal holding a feather Description automatically generated">
+
+</p>
 
 
                 
@@ -250,15 +349,10 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/2021-09-01-my-first-post/" data-toggle="tooltip" data-placement="top" title="第一篇，写在2021.9.1">&larr;
+                        <a href="/post/2023-09-07-slowloris/" data-toggle="tooltip" data-placement="top" title="聊聊Slowloris与慢速攻击">&larr;
                             Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/post/2023-09-07-slowloris/" data-toggle="tooltip" data-placement="top" title="聊聊Slowloris与慢速攻击">Next
-                            Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
