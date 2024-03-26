@@ -6,7 +6,16 @@
     <description>Recent content in DDoS on Miaoyu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://miaoyu.io/tags/ddos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://miaoyu.io/tags/ddos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CISA/FBI/MS-ISAC更新DDoS攻击理解和响应指南v2.0版本</title>
+      <link>https://miaoyu.io/post/2024-03-26-cisa-fbi-ddos/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://miaoyu.io/post/2024-03-26-cisa-fbi-ddos/</guid>
+      <description>CISA/FBI/MS-ISAC更新DDoS攻击理解和响应指南v2.0版本 美国网络安全和基础设施安全局（CISA）、联邦调查局（FBI）和多</description>
+    </item>
+    
     <item>
       <title>Talk about Slowloris and slow HTTP attacks</title>
       <link>https://miaoyu.io/post/2023-09-07-slowloris-en/</link>
